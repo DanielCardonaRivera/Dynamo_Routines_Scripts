@@ -12,7 +12,7 @@ doc = DocumentManager.Instance.CurrentDBDocument
 views = FilteredElementCollector(doc).OfClass(View).ToElements()
 
 # Lista de nuevos nombres para las vistas
-nuevos_nombres = ["Vista 1", "Vista 2", "Vista 3"]  # Modifica esto según tus necesidades
+nuevos_nombres = ["Vista 1", "Vista 2", "Vista 3"]  
 
 # Renombrar las vistas
 for i, vista in enumerate(views):
