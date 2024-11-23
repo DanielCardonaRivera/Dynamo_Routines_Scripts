@@ -8,6 +8,7 @@ from Autodesk.Revit.DB import FilteredElementCollector, View
 # Obtener el documento activo
 doc = DocumentManager.Instance.CurrentDBDocument
 
+
 # Obtener todas las vistas en el documento
 views = FilteredElementCollector(doc).OfClass(View).ToElements()
 
