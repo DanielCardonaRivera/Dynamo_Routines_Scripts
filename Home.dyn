@@ -1,0 +1,408 @@
+{
+  "Uuid": "a3610b29-7dc4-4ca0-bfc9-110eb1dee201",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Home",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "5f25a3f829d14ba78dc24e3ff6efa8a0",
+      "Inputs": [
+        {
+          "Id": "8e3f64d516b548e5afaa24676b1493d6",
+          "Name": "x",
+          "Description": "double\nValor por defecto : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d9319c76d664efaaa2e3d0363873796",
+          "Name": "y",
+          "Description": "double\nValor por defecto : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea860f4657cc407bba3a54367f4e5ff9",
+          "Name": "z",
+          "Description": "double\nValor por defecto : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "036b91e4e1cc4a839e6cd1931f4eb58e",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Genera un punto con las tres coordenadas cartesianas especificadas.\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[0,0,0];",
+      "Id": "103f6f9ebf0548ffac0e84767af550a8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "21a636d24440497ea58853a75b73f512",
+          "Name": "",
+          "Description": "Valor de la expresión en la línea 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Permite creación directa de código de DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "67f2ba1c1bca438da646ef174b239da0",
+      "Inputs": [
+        {
+          "Id": "428b8fe5ed3545f2890b92dc970c8168",
+          "Name": "centerPoint",
+          "Description": "Point\nValor por defecto : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d626bc0bcf444bf4af6c7619f79826d8",
+          "Name": "radius",
+          "Description": "double\nValor por defecto : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d85ee5c61b2542d7b8eab28d039eb286",
+          "Name": "Circle",
+          "Description": "Circle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Crea un círculo con punto central y radio en el plano XY universal, con el plano Z universal como normal.\n\nCircle.ByCenterPointRadius (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1): Circle"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2;",
+      "Id": "52cf9b65e4b0456cbcd2327b3446e8de",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "00e3cbe331dd43818ca4dea44bd54609",
+          "Name": "",
+          "Description": "Valor de la expresión en la línea 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Permite creación directa de código de DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyType.ByGeometry@Autodesk.DesignScript.Geometry.Solid,string,Revit.Elements.Category,string,Revit.Elements.Material,string",
+      "Id": "0e7f15ddd68f4f01a70839abbcba0da7",
+      "Inputs": [
+        {
+          "Id": "d34c2c15e2d645c6998ffd92c53ce53a",
+          "Name": "solidGeometry",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d71fbdbdc1284498939073a403c51d35",
+          "Name": "name",
+          "Description": "Nombre para el tipo de familia\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "10add09667d9413fab347e44e9894c1d",
+          "Name": "category",
+          "Description": "Categoría de tipo de familia\n\nCategory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d3150bd1425f44898ea3c2a734d7512e",
+          "Name": "templatePath",
+          "Description": "Plantilla de familia que usar para creación\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a7b6b094695e4d99b977eed099afca8b",
+          "Name": "material",
+          "Description": "Material que aplicar a los sólidos\n\nMaterial",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "36c391d463b7446db7555bc2daff8ae5",
+          "Name": "subcategory",
+          "Description": "Subcategoría del tipo de familia (opcional)\n\nstring\nValor por defecto : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "de5b0c698ac74b87b4e472d0be2784d4",
+          "Name": "FamilyType",
+          "Description": "Tipo de familia",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Crea un nuevo tipo de familia a partir de geometría sólida. Este método exporta la geometría a SAT y la importa a un nuevo documento de familia.\n\nFamilyType.ByGeometry (solidGeometry: Solid, name: string, category: Category, templatePath: string, material: Material, subcategory: string = \"\"): FamilyType"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetCategory",
+      "Id": "7c66c69f283049cf8d07b9042cda7bca",
+      "Inputs": [
+        {
+          "Id": "985a3fa38e57414ea49388ccc1dfd0b1",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "256f5da5d9e044009d66db3e9ebb504d",
+          "Name": "Category",
+          "Description": "Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Obtener categoría de elemento\n\nElement.GetCategory: Category"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.WallTypes, DSRevitNodesUI",
+      "SelectedIndex": 7,
+      "SelectedString": "Interior - Partition",
+      "NodeType": "ExtensionNode",
+      "Id": "fd9cb59d707f4f11a11dd735434bf8e6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "60c2eaecef8a429f9a2d2d63a30ea7ac",
+          "Name": "Wall Type",
+          "Description": "Wall Type seleccionado",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Todos los tipos de muro disponibles en el documento."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "036b91e4e1cc4a839e6cd1931f4eb58e",
+      "End": "428b8fe5ed3545f2890b92dc970c8168",
+      "Id": "058499d00e644984960680980f9d5d62"
+    },
+    {
+      "Start": "21a636d24440497ea58853a75b73f512",
+      "End": "8e3f64d516b548e5afaa24676b1493d6",
+      "Id": "22a2ebe771a74ab29aa7f8cbf388c517"
+    },
+    {
+      "Start": "21a636d24440497ea58853a75b73f512",
+      "End": "0d9319c76d664efaaa2e3d0363873796",
+      "Id": "51613125611f4fc3800b0a048e1de64e"
+    },
+    {
+      "Start": "21a636d24440497ea58853a75b73f512",
+      "End": "ea860f4657cc407bba3a54367f4e5ff9",
+      "Id": "2638cd58a90b4eec816bb7822fb3b38c"
+    },
+    {
+      "Start": "d85ee5c61b2542d7b8eab28d039eb286",
+      "End": "d34c2c15e2d645c6998ffd92c53ce53a",
+      "Id": "faabc7582e3c4e498e1783c4495bb85c"
+    },
+    {
+      "Start": "00e3cbe331dd43818ca4dea44bd54609",
+      "End": "d626bc0bcf444bf4af6c7619f79826d8",
+      "Id": "0b500db0576a4d399332deac4c6e6af7"
+    },
+    {
+      "Start": "256f5da5d9e044009d66db3e9ebb504d",
+      "End": "10add09667d9413fab347e44e9894c1d",
+      "Id": "54af4fa48d7c4a48a3c01a874ccb9274"
+    },
+    {
+      "Start": "60c2eaecef8a429f9a2d2d63a30ea7ac",
+      "End": "985a3fa38e57414ea49388ccc1dfd0b1",
+      "Id": "c15a6e5a246b46238f42799dc4194489"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.7500",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Vista preliminar en segundo plano",
+      "EyeX": -0.11201866018786433,
+      "EyeY": 12.914163705668106,
+      "EyeZ": 9.4794613128626644,
+      "LookX": -5.3997397388756774,
+      "LookY": -9.5827851235658414,
+      "LookZ": -8.375342757139741,
+      "UpX": -0.28312324697604008,
+      "UpY": 0.8526401643540924,
+      "UpZ": -0.4391423199282562
+    },
+    "NodeViews": [
+      {
+        "Id": "5f25a3f829d14ba78dc24e3ff6efa8a0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Point.ByCoordinates",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 580.73289529743818,
+        "Y": -46.998407690611515
+      },
+      {
+        "Id": "103f6f9ebf0548ffac0e84767af550a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 307.48139645106903,
+        "Y": 144.2590865412339
+      },
+      {
+        "Id": "67f2ba1c1bca438da646ef174b239da0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Circle.ByCenterPointRadius",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1002.6829016761515,
+        "Y": -37.840490021720484
+      },
+      {
+        "Id": "52cf9b65e4b0456cbcd2327b3446e8de",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 819.481396451069,
+        "Y": 170.2590865412339
+      },
+      {
+        "Id": "0e7f15ddd68f4f01a70839abbcba0da7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "FamilyType.ByGeometry",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1468.6256176759846,
+        "Y": -31.865222987943412
+      },
+      {
+        "Id": "7c66c69f283049cf8d07b9042cda7bca",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Element.GetCategory",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1124.4769327733577,
+        "Y": 230.50555659128702
+      },
+      {
+        "Id": "fd9cb59d707f4f11a11dd735434bf8e6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Wall Types",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 848.47650230689442,
+        "Y": 293.54269194473852
+      }
+    ],
+    "Annotations": [],
+    "X": 125.98427457025696,
+    "Y": 252.89532642336479,
+    "Zoom": 0.38016643028855
+  }
+}
